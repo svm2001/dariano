@@ -1,0 +1,257 @@
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    font-size: 30px;
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+}
+
+.config {
+    width: 1200px;
+    //height: 900px;
+    display: flex;
+
+    .logo {
+        margin-left: 30px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    &__tabs {
+        width: 400px;
+        //height: 900px;
+        background-color: #2A3251;
+    }
+
+    &__content {
+        width: 800px;
+        //height: 900px;
+    }
+}
+
+.tabs {
+    margin-bottom: 50px;
+}
+
+.tabs__nav-btn {
+    position: relative;
+    border-top: none;
+    border-bottom: 1px solid gray;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    width: 400px;
+    height: 52px;
+    background-color: #2A3251;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 30px;
+
+    .switcher {
+        position: absolute;
+        top: -15px;
+        left: 362px;
+        display: none;
+    }
+
+    &.active {
+        background: #E69096;
+        color: white;
+        border: none;
+    }
+
+    &:first-child {
+        border-top: 1px solid gray;
+    }
+}
+
+.tabs__nav-btn.active .switcher {
+    display: block;
+}
+
+.tabs__item {
+    display: none;
+}
+
+.tabs__item.active {
+    display: block;
+}
+
+.my-orders {
+    width: 340px;
+    height: 50px;
+    color: white;
+    background: #E69096;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 35px auto;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .3s;
+
+    &:hover {
+        background: white;
+        color: #e69096;
+    }
+}
+
+.config__content {
+    padding: 50px 0 53px 50px;
+}
+
+.order-num {
+    font-family: Spectral, sans-serif;
+    font-size: 48px;
+    line-height: 73px;
+    font-weight: 600;
+}
+
+.order-desc {
+    font-family: Spectral, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.config__total {
+    padding-top: 20px;
+    border-top: 1px solid #D1D1D1;
+}
+
+.total__article {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.total__article-value {
+    font-weight: 900;
+}
+
+.total__article--margin{
+    margin-bottom: 33px;
+}
+
+.reset {
+    font-size: 20px;
+    line-height: 30px;
+    color: #2a3251;
+    padding: 10px 33px;
+    border: 1px solid #2a3251;
+    background: white;
+    transition: .3s;
+
+    &:hover {
+        background: #2a3251;
+        color: white;
+
+    }
+}
+
+.order {
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    padding: 10px 33px;
+    border: 1px solid #2a3251;
+    background: #2a3251;
+    transition: .3s;
+
+    &:hover {
+        color: #2a3251;
+        background: white;
+    }
+}
+
+@media (max-width: 1200px) {
+    .config {
+        width: 1000px;
+        //height: 850px;
+
+        &__tabs {
+            width: 253px;
+            //height: 850px;
+        }
+
+        &__content {
+            width: 675px;
+            //height: 850px;
+        }
+    }
+
+    .tabs {
+        margin-bottom: 40px;
+    }
+
+    .tabs__nav-btn {
+
+        width: 253px;
+        height: 50px;
+
+        .switcher {
+            left: 215px;
+        }
+    }
+
+    .my-orders {
+        width: 193px;
+    }
+
+    .config__content {
+        padding: 30px 0 30px 20px;
+    }
+}
+
+@media (max-width: 930px) {
+    .config {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .config__tabs, .tabs__nav-btn {
+        width: 100%;
+    }
+
+    .tabs__nav-btn.active .switcher {
+        display: none;
+    }
+
+    .my-orders {
+        width: 95%;
+        display: flex;
+        margin: 0 auto 35px auto;
+    }
+
+    .order-num {
+        font-size: 36px;
+        line-height: 55px;
+
+    }
+}
+
+@media (max-width: 620px) {
+
+    .total__article {
+        flex-direction: column;
+
+        button {
+            margin-bottom: 20px;
+        }
+    }
+}
