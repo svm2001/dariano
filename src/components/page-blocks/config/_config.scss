@@ -60,6 +60,10 @@
     text-align: left;
     padding-left: 30px;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     .switcher {
         position: absolute;
         top: -15px;
@@ -159,7 +163,7 @@
     &:hover {
         background: #2a3251;
         color: white;
-
+        cursor: pointer;
     }
 }
 
@@ -175,6 +179,7 @@
     &:hover {
         color: #2a3251;
         background: white;
+        cursor: pointer;
     }
 }
 
