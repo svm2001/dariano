@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Дариано",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+@@include('components/page-blocks/_header.html')
+<main class="main">
+    <section class="order-block">
+        <div class="container">
+
+            <div class="order-block__info">
+                <p class="order-block__name">Заказ №001</p>
+                <a href="" class="order-block__actions order">Акции</a>
+            </div>
+            <div class="order-block__info-list">
+                <div class="text-input-wrapper text-input-wrapper--add order__data">
+                    <label class="text__input-name" for="orderDate">Дата</label>
+                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                    </svg>
+                    <input type="date" class="text__input" placeholder="" required id="orderDate">
+                </div>
+
+                <div class="dropdown dropdown--order">
+                    <span class="dropdown__name">Статус</span>
+                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                    </svg>
+                    <button class="dropdown__button">Выберите статус</button>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="door1">1</li>
+                        <li class="dropdown__list-item" data-value="door2">2</li>
+                    </ul>
+                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                </div>
+
+                <div class="text-input-wrapper text-input-wrapper--add order__tel">
+                    <label class="text__input-name" for="orderTel">Телефон</label>
+                    <input type="tel" class="text__input" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" placeholder="+7" id="orderTel" required>
+                </div>
+
+                <div class="text-input-wrapper text-input-wrapper--add order__fio">
+                    <label class="text__input-name" for="orderFio">ФИО</label>
+                    <input type="text" class="text__input" placeholder="Введите ваше ФИО" id="orderFio">
+                </div>
+
+                <div class="text-input-wrapper text-input-wrapper--add order__address">
+                    <label class="text__input-name" for="orderAddress">Адрес</label>
+                    <input type="text" class="text__input" placeholder="Введите адрес" id="orderAddress">
+                </div>
+
+                <div class="text-input-wrapper text-input-wrapper--add order__prim">
+                    <label class="text__input-name" for="door__vrezka-add">Примечание</label>
+                    <input type="text" class="text__input" placeholder="Введите примечание" id="door__vrezka-add">
+                </div>
+            </div>
+            <div class="order-block__content">
+                <div class="content__row content__row--desktop">
+                    <span></span><span></span>
+                    <div class="content__cell">Номенклатура</div>
+                    <div class="content__cell">Проем</div>
+                    <div class="content__cell">Артикул</div>
+                    <div class="content__cell">Наименование</div>
+                    <div class="content__cell">Кол-во</div>
+                    <div class="content__cell">Цена</div>
+                    <div class="content__cell">Скидка</div>
+                    <div class="content__cell">Сумма</div>
+                    <div class="content__cell">Цена закупки</div>
+                </div>
+                <div class="content__row">
+                    <label class="content__checkbox-wrapper" for="order1">Выбрать</label>
+                    <input class="order__checkbox" id="order1" type="checkbox">
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Номенклатура</div>
+                        <p class="contenct__cell--padding">Дверь</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Проем</div>
+                        <p class="content__cell--mob-meaning">Зал</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Артикул</div>
+                        <p class="content__cell--mob-meaning">00001002024495</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Наименование</div>
+                        <p class="content__cell--mob-meaning">Турин-XL, эмаль крем, ДГ, филенка без рисунка/нет филенки, стекло выбеленное, 2000х900, нет, левая</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Количество</div>
+                        <p class="content__cell--mob-meaning">1</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Цена</div>
+                        <p class="content__cell--mob-meaning">15 140 ₽</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Скидка</div>
+                        <p class="content__cell--mob-meaning">30%</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Сумма</div>
+                        <p class="content__cell--mob-meaning">10 590 ₽</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Цена закупки</div
+                        ><p class="content__cell--mob-meaning">13 626 ₽</p>
+                    </div>
+                </div>
+                <div class="content__row">
+                    <label class="content__checkbox-wrapper" for="order2">Выбрать</label>
+                    <input class="order__checkbox" id="order2" type="checkbox">
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Номенклатура</div>
+                        <p class="contenct__cell--padding">Дверь</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Проем</div>
+                        <p class="content__cell--mob-meaning">Зал</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Артикул</div>
+                        <p class="content__cell--mob-meaning">00001002024495</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Наименование</div>
+                        <p class="content__cell--mob-meaning">Турин-XL, эмаль крем, ДГ, филенка без рисунка/нет филенки, стекло выбеленное, 2000х900, нет, левая</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Количество</div>
+                        <p class="content__cell--mob-meaning">1</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Цена</div>
+                        <p class="content__cell--mob-meaning">15 140 ₽</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Скидка</div>
+                        <p class="content__cell--mob-meaning">30%</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Сумма</div>
+                        <p class="content__cell--mob-meaning">10 590 ₽</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Цена закупки</div
+                        ><p class="content__cell--mob-meaning">13 626 ₽</p>
+                    </div>
+                </div>
+                <div class="content__row">
+                    <label class="content__checkbox-wrapper" for="order3">Выбрать</label>
+                    <input class="order__checkbox" id="order3" type="checkbox">
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Номенклатура</div>
+                        <p class="contenct__cell--padding">Дверь</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Проем</div>
+                        <p class="content__cell--mob-meaning">Зал</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Артикул</div>
+                        <p class="content__cell--mob-meaning">00001002024495</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Наименование</div>
+                        <p class="content__cell--mob-meaning">Турин-XL, эмаль крем, ДГ, филенка без рисунка/нет филенки, стекло выбеленное, 2000х900, нет, левая</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Количество</div>
+                        <p class="content__cell--mob-meaning">1</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Цена</div>
+                        <p class="content__cell--mob-meaning">15 140 ₽</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Скидка</div>
+                        <p class="content__cell--mob-meaning">30%</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Сумма</div>
+                        <p class="content__cell--mob-meaning">10 590 ₽</p>
+                    </div>
+                    <div class="content__cell">
+                        <div class="content__cell--mob">Цена закупки</div
+                        ><p class="content__cell--mob-meaning">13 626 ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-block__total">
+                <div class="order-block__total-line">
+                    <div class="order-block__total-summ">ИТОГО</div>
+                    <div class="order-block__total-summ-num">21 098 ₽</div>
+                </div>
+                <div class="order-block__total-line">
+                    <div class="order-block__total-summ">ИТОГО ЗАКУПКИ</div>
+                    <div class="order-block__total-summ-num">21 098 ₽</div>
+                </div>
+            </div>
+            <form action="">
+                <div class="order-block__buttons">
+                    <button class="reset">Печать</button>
+                    <a href="" class="reset button--send-to-fabric">Отправить на фабрику</a>
+                    <button class="reset">Добавить</button>
+                    <button class="reset">Удалить</button>
+                    <button class="reset">Изменить</button>
+                    <button class="order order--closeandsave">Сохранить и закрыть</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+</main>
+@@include('components/page-blocks/_footer.html')
+@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
