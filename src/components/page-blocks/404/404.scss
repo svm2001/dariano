@@ -1,0 +1,117 @@
+.page-404 {
+    background: #2A3251;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__text-content--maroon {
+        font-size: 36px;
+        font-weight: 600;
+        font-family: Spectral, sans-serif;
+        color: #E69096;
+        margin-bottom: 10px;
+    }
+
+    &__text-content--white {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    &__text-link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        text-align: center;
+
+        &:before {
+            content: url("/img/arrow.svg");
+            position: absolute;
+            top: 0;
+            left: 36%;
+            transition: .3s;
+        }
+    }
+
+    &__404 {
+        text-shadow: -11.3167px 7.83466px 13.0578px rgba(16, 18, 43, 0.99);
+        font-size: 440px;
+        font-weight: 700;
+        color: white;
+        position: relative;
+        letter-spacing: 35px;
+    }
+
+    &__404-img {
+        position: absolute;
+        left: 6.5%;
+        top: -100px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .page-404 {
+
+        &__404-img {
+            width: 441px;
+            height: auto;
+            top: -50px;
+        }
+
+        &__404 {
+            font-size: 330px;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    .page-404 {
+        padding: 10px;
+
+        &__text-content--white {
+            font-size: 14px;
+            padding: 0 30px;
+        }
+
+        &__text-content--maroon {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        &__404-img {
+            width: 386px;
+            height: auto;
+            top: -50px;
+        }
+
+        &__404 {
+            font-size: calc(150px + (287 - 150) * ((100vw - 320px) / (640 - 320)));
+            letter-spacing: 10px;
+        }
+
+        .page-404__text-link:before {
+            left: 31%;
+        }
+
+        &__404-img {
+            width: calc(200px + (386 - 200) * ((100vw - 320px) / (640 - 320)));
+            top: calc(-25px + (-50 - -25) * ((100vw - 320px) / (640 - 320)));
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
+}
