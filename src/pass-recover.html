@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Дариано | Восстановление пароля",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+    <main class="main">
+        <section class="auth pass-recover">
+            <img src="/img/logo.svg" alt="Логотип Дариано" class="auth__logo">
+
+            <form action="" class="auth__form">
+                <div class="auth__desc">Восстановление пароля</div>
+
+                <div class="auth__form-content">
+
+                    <p class="pass-recover__text">
+                        Если вы забыли пароль, введите логин или E-Mail. Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
+                    </p>
+
+                    <div class="auth__input-wrapper">
+                        <label class="auth__label" for="pw"></label>
+                        <input class="auth__input auth__input--margin" id="pw" type="text" required placeholder="Логин или E-mail">
+
+                        <div class="error">Логин введен неправильно, попробуйте ещё раз</div>
+                    </div>
+
+                    <div class="auth__accept">
+                        <button class="auth__login-btn">Выслать</button>
+                        <a href="auth.html" class="auth__pw-recover">Авторизоваться</a>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
+@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

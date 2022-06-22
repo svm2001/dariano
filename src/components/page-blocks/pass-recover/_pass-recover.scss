@@ -1,0 +1,25 @@
+.pass-recover {
+
+    &__text {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 40px;
+    }
+
+    .auth__form {
+        border: none;
+    }
+
+    .auth__desc {
+        border: 1px solid #7F8497;
+    }
+}
+
+@media (max-width: 520px) {
+    .pass-recover {
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+}

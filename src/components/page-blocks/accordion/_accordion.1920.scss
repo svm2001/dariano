@@ -1,0 +1,114 @@
+.accordion__list {
+    padding: 0;
+}
+
+.accordion {
+    list-style: none;
+    margin-bottom: 0;
+
+    &__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: none;
+        border-top: 1px solid black;
+        //border-bottom: 1px solid black;
+
+        background: transparent;
+        padding: 13px 0;
+        cursor: pointer;
+    }
+
+    &__icon {
+        font-size: 30px;
+        font-weight: 100;
+        color: #2C2C2D;
+        line-height: 0;
+        margin-bottom: 5px;
+    }
+
+    &__icon--open {
+        display: none;
+        font-size: 40px;
+    }
+
+
+    &__title {
+        margin-right: 25px;
+        text-align: left;
+        font-size: 20px;
+        font-family: Spectral, sans-serif;
+        font-weight: 600;
+    }
+    &__content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        will-change: max-height;
+        transition: all .3s ease-out;
+        box-sizing: content-box;
+        padding: 0;
+        visibility: hidden;
+    }
+
+    &.open .accordion__content {
+        opacity: 1;
+        padding: 10px 10px 40px 0;
+        visibility: visible;
+        //border-bottom: 1px solid black;
+    }
+
+    &.open .accordion__icon--close {
+        display: none;
+    }
+
+    &.open .accordion__icon--open {
+        display: block;
+    }
+
+
+
+    &.open .accordion__control {
+        border-bottom: none;
+    }
+}
+
+.accordion:nth-last-child(1) .accordion__control,
+.accordion:nth-last-child(1).open .accordion__content {
+    border-bottom: 1px solid black;
+}
+
+.accordion:nth-last-child(1).open .accordion__control {
+    border-bottom: none;
+}
+
+.popup__title {
+    font-size: 48px!important;
+    font-family: Spectral, sans-serif;
+    font-weight: 600;
+    text-align: left!important;
+}
+
+.popup__actions-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+}
+
+.popup__actions-text:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.popup__actions-text--b {
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+
+    .accordion.open .accordion__content {
+        padding: 10px 0 40px 0;
+        width: calc(100% - 48px);
+        transition: .3s;
+    }
+}

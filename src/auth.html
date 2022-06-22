@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Дариано | Авторизация",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+    <main class="main">
+        <section class="auth">
+            <img src="/img/logo.svg" alt="Логотип Дариано" class="auth__logo">
+
+            <form action="" class="auth__form">
+                <div class="auth__desc">Введите логин и пароль для авторизации</div>
+
+                <div class="auth__form-content">
+
+                    <div class="auth__input-wrapper">
+                        <label class="auth__label" for="login"></label>
+                        <input class="auth__input" id="login" type="text" required placeholder="Логин">
+                    </div>
+
+                    <div class="auth__input-wrapper">
+                        <label class="auth__label" for="pw"></label>
+                        <input class="auth__input auth__input--margin" id="pw" type="password" required placeholder="Пароль">
+
+                        <div class="error">Логин или пароль введен неправильно, попробуйте ещё раз</div>
+                    </div>
+
+                    <div class="auth__accept">
+                        <button class="auth__login-btn">Войти</button>
+                        <a href="pass-recover.html" class="auth__pw-recover">Восстановить пароль</a>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
+@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

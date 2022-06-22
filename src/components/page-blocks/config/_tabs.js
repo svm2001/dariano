@@ -25,4 +25,4 @@ function onTabClick(item) {
     });
 }
 
-document.querySelector('.tabs__nav-btn').click();
+// document.querySelector('.tabs__nav-btn').click();

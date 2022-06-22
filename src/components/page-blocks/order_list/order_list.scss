@@ -203,6 +203,31 @@
     }
 }
 
+.order-list {
+    &__row {
+        .plug {
+            position: absolute!important;
+            left: 22px!important;
+            width: 18px;
+            height: 18px;
+            background: #DCCDCB;
+            color: white;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            font-size: 12px!important;
+            padding-left: 6px;
+            font-weight: 600;
+        }
+
+        .order-list__global--plug {
+            padding-bottom: 39px!important;
+        }
+    }
+}
+
+// после смены статуса на "отправлен на фабрику" нужно к блоку, у которого меняется статус добавлять модификатор "order-list__global--plug"
+
 @media (max-width: 1640px) {
 
     .order-list {
@@ -270,6 +295,12 @@
 
             .dropdown__list {
                 top: 40px!important;
+            }
+        }
+
+        &__row {
+            .plug {
+                padding-left: 6px !important;
             }
         }
 
@@ -345,6 +376,11 @@
             justify-content: end;
         }
 
+        .order-list__cell--mob {
+            font-family: Spectral, sans-serif;
+            color: #2a3251;
+        }
+
         .order-list__order-visible {
             margin-bottom: 30px;
         }
@@ -374,6 +410,10 @@
 
         .order-list__global--mob-hide {
             display: none;
+        }
+
+        .order-list__global {
+            border-left: none!important;
         }
 
         .empty {
@@ -484,6 +524,20 @@
             justify-content: center;
         }
 
+        .order-list__global {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px 0;
+        }
+
+        .order-list__global--nopadding .order__checkbox {
+            top: 18px!important;
+        }
+
+        .order-list__cell--mob {
+            margin-bottom: 5px!important;
+        }
+
         .order-block__date {
             margin-right: 0;
             width: 100%;
@@ -506,7 +560,6 @@
             .reset, .order {
                 margin-bottom: 20px!important;
             }
-
         }
     }
 }
