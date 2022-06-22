@@ -31,10 +31,11 @@
         color: white;
         text-decoration: none;
         position: relative;
+        z-index: 2;
         text-align: center;
 
         &:before {
-            content: url("/img/arrow.svg");
+            content: url("../../img/arrow.svg");
             position: absolute;
             top: 0;
             left: 36%;
