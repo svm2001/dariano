@@ -135,7 +135,26 @@
     }
 
     .content__cell {
+        position: relative;
         border-bottom: 1px solid rgba(64, 64, 64, .2);
+
+        input[type="number"] {
+            width: 60px;
+            text-align: center;
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+
+        &--discount {
+            &:after {
+                position: absolute;
+                content: "%";
+                top: 22px;
+                left: 45px;
+                font-size: 16px;
+            }
+        }
     }
 
     .content__cell:nth-child(3) {
@@ -251,6 +270,12 @@
 
         .content__cell {
             padding: 18px 10px;
+
+            &--discount {
+                &:after {
+                    top: 33px;
+                }
+            }
         }
 
         .content__cell:nth-child(3) {
@@ -349,6 +374,17 @@
 
         .content__cell {
             padding: 0;
+
+            input[type="number"] {
+                margin-left: 8px;
+            }
+
+            &--discount {
+                &:after {
+                    top: 18px;
+                    left: 184px;
+                }
+            }
         }
 
         .content__row {
@@ -440,6 +476,18 @@
     .order-block {
         .content__cell {
             display: block;
+
+            input[type="number"] {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            &--discount {
+                &:after {
+                    top: 35px;
+                    left: 38px;
+                }
+            }
         }
 
         .content__cell--mob {

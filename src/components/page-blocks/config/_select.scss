@@ -84,6 +84,12 @@
     border-bottom: 1px solid gray;
 }
 
+.text-input-wrapper--nohover {
+    input:hover {
+        cursor: auto;
+    }
+}
+
 .dropdown__name, .text__input-name {
     position: absolute;
     color: #e69096;

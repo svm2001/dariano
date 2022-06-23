@@ -2,7 +2,7 @@
     padding-top: 50px;
     height: 100vh;
     width: 100vw;
-    background: url("/img/auth/bg.svg") center center no-repeat #2A3251;
+    background: url("../img/auth/bg.svg") center center no-repeat #2A3251;
     background-size: calc(315px + (800 - 315) * ((100vw - 320px) / (1920 - 320))), contain;
 
     &__logo {
