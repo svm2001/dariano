@@ -29,7 +29,7 @@
 .dropdown, .text-input-wrapper {
     position: relative;
     width: 340px;
-    margin-bottom: 30px;
+    margin-bottom: 58px;
 }
 
 .text-input-wrapper--add {
@@ -106,6 +106,7 @@
     top: 16px;
     right: 16px;
     z-index: 1;
+    pointer-events: none;
 }
 
 .dropdown__cursor.dropdown__cursor--active {

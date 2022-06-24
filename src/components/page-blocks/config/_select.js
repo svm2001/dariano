@@ -14,14 +14,15 @@ document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper){
     const dropdownInput = dropdownWrapper.querySelector('.dropdown__input-hidden');
 
     dropdownBtn.addEventListener('click', function (){
-        dropdownList.classList.toggle('dropdown__list-visible')
+        dropdownList.classList.toggle('dropdown__list-visible');
+
         this.classList.add('dropdown__button--active');
     })
 
     dropdownListItems.forEach(function (listItem) {
         listItem.addEventListener('click', function (e) {
             e.stopPropagation();
-            dropdownBtn.innerText =  this.innerText;
+            dropdownBtn.innerHTML =  this.innerText;
             dropdownBtn.focus();
             dropdownInput.value = this.dataset.value;
             dropdownList.classList.remove('dropdown__list-visible');
@@ -32,7 +33,6 @@ document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper){
         if (e.target !== dropdownBtn) {
             dropdownBtn.classList.remove('dropdown__button--active');
             dropdownList.classList.remove('dropdown__list-visible')
-
         }
     })
 })

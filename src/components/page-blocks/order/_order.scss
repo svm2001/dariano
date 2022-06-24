@@ -113,13 +113,6 @@
         background: #F3E6E4;
     }
 
-    .content__cell {
-        font-size: 14px;
-        padding: 15px 10px;
-        display: flex;
-        align-items: center;
-    }
-
     .contenct__cell--padding {
         padding-left: 20px;
     }
@@ -137,6 +130,10 @@
     .content__cell {
         position: relative;
         border-bottom: 1px solid rgba(64, 64, 64, .2);
+        font-size: 14px;
+        padding: 15px 10px;
+        display: flex;
+        align-items: center;
 
         input[type="number"] {
             width: 60px;
@@ -153,6 +150,7 @@
                 top: 22px;
                 left: 45px;
                 font-size: 16px;
+                color: #7F8497;
             }
         }
     }

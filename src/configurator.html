@@ -51,7 +51,7 @@
                     </button>
                 </div>
             </div>
-            <a href="javascript:void(0);" class="my-orders">Мои заказы</a>
+            <a href="order_list.html" class="my-orders">Мои заказы</a>
         </div>
         <div class="config__content">
             <p class="order-num">Заказ №001</p>
@@ -60,155 +60,185 @@
                     <p class="order-desc">Конфигурация двери</p>
                     <div class="tabs__main-inputs">
                         <div class="tabs__left-col">
-                            <div class="dropdown">
-                                <span class="dropdown__name">Модель</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите модель</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Аленсо</li>
-                                    <li class="dropdown__list-item" data-value="door2">Барселона</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <!--                                <sup class="tooltip-wrapper"><span class="help-icon tooltip" title="*для полотен с ал.кромкой + панелями"></span></sup>-->
+                                    <div class="order__extra-info">*для полотен с ал.кромкой + панелями</div>
+                                    <span class="dropdown__name">Модель</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите модель</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Аленсо</li>
+                                        <li class="dropdown__list-item" data-value="door2">Барселона</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Тип</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите тип</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">ДГ+ал.кромка S-3</li>
-                                    <li class="dropdown__list-item" data-value="door2">ДГ+ал.кромка Q-3 золото</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Тип</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите тип</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">ДГ+ал.кромка S-3</li>
+                                        <li class="dropdown__list-item" data-value="door2">ДГ+ал.кромка Q-3 золото</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Стекло вид / цвет</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите стекло</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Стекло грей</li>
-                                    <li class="dropdown__list-item" data-value="door2">Сатин грей</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
-                            </div>
-
-                            <div class="dropdown">
-                                <span class="dropdown__name">Высота</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите высоту</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">2000</li>
-                                    <li class="dropdown__list-item" data-value="door2">2050</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <div class="order__extra-info">дополнительное описание стекла</div>
+                                    <span class="dropdown__name">Стекло вид / цвет</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите стекло</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Стекло грей</li>
+                                        <li class="dropdown__list-item" data-value="door2">Сатин грей</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Врезка</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите врезку</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Врезка порога автоматического</li>
-                                    <li class="dropdown__list-item" data-value="door2">Врезка петель DR (2 шт)</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Высота</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите высоту</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">2000</li>
+                                        <li class="dropdown__list-item" data-value="door2">2050</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="text-input-wrapper text-input-wrapper--add text-input-wrapper--kolvo">
-                                <label class="text__input-name" for="door__summ">Количество</label>
-                                <input type="number" min="1" max="100000" class="text__input text__input--summ" placeholder="Введите количество" id="door__summ">
+
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Врезка</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите врезку</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Врезка порога автоматического</li>
+                                        <li class="dropdown__list-item" data-value="door2">Врезка петель DR (2 шт)</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
+
+                            <div class="dropdown-wrapper">
+                                <div class="text-input-wrapper text-input-wrapper--add text-input-wrapper--kolvo">
+                                    <label class="text__input-name" for="door__summ">Количество</label>
+                                    <input type="number" min="1" max="100000" class="text__input text__input--summ" placeholder="Введите количество" id="door__summ">
+                                </div>
+                            </div>
+
                         </div>
                         <div class="tabs__right-col">
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Покрытие / цвет</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите покрытие / цвет</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Дуб медовый</li>
-                                    <li class="dropdown__list-item" data-value="door2">Дуб коньяк</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Покрытие / цвет</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите покрытие / цвет</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Дуб медовый</li>
+                                        <li class="dropdown__list-item" data-value="door2">Дуб коньяк</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Филенка</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите оформление филенки</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Контур Бланш</li>
-                                    <li class="dropdown__list-item" data-value="door2">Контур Велла* золото+заливка бордо (ВФ-1)</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Филенка</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите оформление филенки</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Контур Бланш</li>
+                                        <li class="dropdown__list-item" data-value="door2">Контур Велла* золото+заливка бордо (ВФ-1)</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Стекло</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите вид / цвет стекла</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Триплекс сатин-2 выбеленый (св-п-св)</li>
-                                    <li class="dropdown__list-item" data-value="door2">Триплекс матовый бронза (б-м-б)</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Стекло</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите вид / цвет стекла</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Триплекс сатин-2 выбеленый (св-п-св)</li>
+                                        <li class="dropdown__list-item" data-value="door2">Триплекс матовый бронза (б-м-б)</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Ширина</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите ширину</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">850</li>
-                                    <li class="dropdown__list-item" data-value="door2">950</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Ширина</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите ширину</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">850</li>
+                                        <li class="dropdown__list-item" data-value="door2">950</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Сторонность</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите сторонность</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">Правая</li>
-                                    <li class="dropdown__list-item" data-value="door2">Левая</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Сторонность</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите сторонность</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">Правая</li>
+                                        <li class="dropdown__list-item" data-value="door2">Левая</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
-                            <div class="dropdown">
-                                <span class="dropdown__name">Проем</span>
-                                <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
-                                </svg>
-                                <button class="dropdown__button">Выберите проем</button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__list-item" data-value="door1">1</li>
-                                    <li class="dropdown__list-item" data-value="door2">2</li>
-                                </ul>
-                                <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                            <div class="dropdown-wrapper">
+                                <div class="order__extra-info">дополнительное описание проема</div>
+                                <div class="dropdown">
+                                    <span class="dropdown__name">Проем</span>
+                                    <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
+                                    </svg>
+                                    <button class="dropdown__button">Выберите проем</button>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="door1">1</li>
+                                        <li class="dropdown__list-item" data-value="door2">2</li>
+                                    </ul>
+                                    <input class="dropdown__input-hidden" type="text" name="select-category" value="" >
+                                </div>
                             </div>
 
                         </div>
@@ -337,11 +367,11 @@
                         <div class="tabs__right-col">
 
                             <div class="dropdown">
-                                <span class="dropdown__name">Высота полотна</span>
+                                <span class="dropdown__name">Высота</span>
                                 <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
                                 </svg>
-                                <button class="dropdown__button">Выберите высоту полотна</button>
+                                <button class="dropdown__button">Выберите высоту</button>
                                 <ul class="dropdown__list">
                                     <li class="dropdown__list-item" data-value="door1">Стандарт</li>
                                     <li class="dropdown__list-item" data-value="door2">Супердлиномер</li>
@@ -477,11 +507,11 @@
                         <div class="tabs__right-col">
 
                             <div class="dropdown">
-                                <span class="dropdown__name">Ширина полотна</span>
+                                <span class="dropdown__name">Ширина панели</span>
                                 <svg class="dropdown__cursor" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3363 1.36997C12.5407 1.18422 12.5557 0.867992 12.37 0.663664C12.1842 0.459335 11.868 0.444277 11.6637 0.63003L12.3363 1.36997ZM6.5 6L6.16366 6.36997L6.5 6.67573L6.83634 6.36997L6.5 6ZM1.33634 0.63003C1.13201 0.444277 0.815783 0.459335 0.63003 0.663664C0.444277 0.867992 0.459335 1.18422 0.663664 1.36997L1.33634 0.63003ZM11.6637 0.63003L6.16366 5.63003L6.83634 6.36997L12.3363 1.36997L11.6637 0.63003ZM6.83634 5.63003L1.33634 0.63003L0.663664 1.36997L6.16366 6.36997L6.83634 5.63003Z" fill="#2A3251"/>
                                 </svg>
-                                <button class="dropdown__button">Выберите ширину полотна</button>
+                                <button class="dropdown__button">Выберите ширину панели</button>
                                 <ul class="dropdown__list">
                                     <li class="dropdown__list-item" data-value="door1">600</li>
                                     <li class="dropdown__list-item" data-value="door2">650</li>
@@ -851,7 +881,7 @@
                 </div>
                 <div class="total__article total__article--buttons">
                     <button class="reset" onclick="refresh()">Очистить</button>
-                    <button class="order">Оформить заказ</button>
+                    <a href="order.html" class="order">Добавить в заказ</a>
                 </div>
 
             </div>
